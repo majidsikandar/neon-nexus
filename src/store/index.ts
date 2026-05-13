@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import type { User, VIPTier } from '@/types'
+import type { User } from '@/types'
 
 interface UserState {
   user: User | null

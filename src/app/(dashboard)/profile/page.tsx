@@ -10,8 +10,6 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Input } from '@/components/ui/input'
-import { Progress } from '@/components/ui/progress'
 
 export default function ProfilePage() {
   const { user } = useUserStore()

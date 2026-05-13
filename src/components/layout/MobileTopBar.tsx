@@ -2,33 +2,16 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { Search, Bell, Zap, Eye, EyeOff, Menu } from 'lucide-react'
 import { formatCurrency } from '@/lib/utils'
-import { useUIStore, useUserStore, useNotificationStore } from '@/store'
+import { useUIStore, useUserStore } from '@/store'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-} from '@/components/ui/sheet'
 
 export function MobileTopBar() {
   const [showBalance, setShowBalance] = useState(true)
   const { setMobileNavOpen } = useUIStore()
   const { user } = useUserStore()
-  const { notifications, unreadCount } = useNotificationStore()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 lg:hidden h-[64px] bg-bg-surface/95 backdrop-blur-xl border-b border-white/5">
@@ -68,11 +51,6 @@ export function MobileTopBar() {
             className="relative w-9 h-9"
           >
             <Bell className="w-4 h-4" />
-            {unreadCount > 0 && (
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-accent-red rounded-full text-[10px] text-white flex items-center justify-center font-bold">
-                {unreadCount}
-              </span>
-            )}
           </Button>
 
           {/* Menu */}

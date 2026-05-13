@@ -6,7 +6,6 @@ import { vipTiers } from '@/config/mock-data'
 import { useUserStore } from '@/store'
 import { cn, formatNumber } from '@/lib/utils'
 import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Progress } from '@/components/ui/progress'
 
@@ -58,7 +57,7 @@ export default function VIPPage() {
               {currentTier.name} VIP
             </h2>
             <p className="text-text-secondary mb-4">
-              You're on your way to {vipTiers[vipTiers.indexOf(currentTier) + 1]?.name || 'max'} VIP!
+              You&apos;re on your way to {vipTiers[vipTiers.indexOf(currentTier) + 1]?.name || 'max'} VIP!
             </p>
 
             {/* Progress to Next Tier */}

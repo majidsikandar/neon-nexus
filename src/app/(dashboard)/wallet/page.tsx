@@ -8,12 +8,10 @@ import {
   ArrowDownLeft,
   CreditCard,
   Bitcoin,
-  Plus,
   Eye,
   EyeOff,
-  Search,
-  ArrowRightLeft,
   Gift,
+  ArrowRightLeft,
 } from 'lucide-react'
 import { mockTransactions } from '@/config/mock-data'
 import { useUserStore } from '@/store'
@@ -22,7 +20,6 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   Dialog,
   DialogContent,

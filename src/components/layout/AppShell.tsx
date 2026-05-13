@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useUIStore, useUserStore } from '@/store'
 import { mockUser } from '@/config/mock-data'
 import { Sidebar } from './Sidebar'
@@ -9,7 +8,6 @@ import { Header } from './Header'
 import { MobileTopBar } from './MobileTopBar'
 import { MobileBottomNav } from './MobileBottomNav'
 import { Sheet, SheetContent } from '@/components/ui/sheet'
-import { Separator } from '@/components/ui/separator'
 import Link from 'next/link'
 import {
   Home,

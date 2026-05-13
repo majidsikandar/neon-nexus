@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Trophy, Sparkles } from 'lucide-react'
-import { cn, formatCurrency } from '@/lib/utils'
+import { formatCurrency } from '@/lib/utils'
 import { liveWinners } from '@/config/mock-data'
 
 export function LiveWinnersFeed() {

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Gift, Flame, Target, Trophy, CheckCircle2, Lock, Star } from 'lucide-react'
 import { mockMissions, mockDailyStreak, mockRewards } from '@/config/mock-data'
 import { useUserStore } from '@/store'
-import { cn, formatCurrency, formatTimeAgo } from '@/lib/utils'
+import { cn, formatTimeAgo } from '@/lib/utils'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -266,7 +266,7 @@ export default function RewardsPage() {
         </TabsContent>
 
         <TabsContent value="history" className="space-y-4">
-          {mockRewards.map((reward, index) => (
+          {mockRewards.map((reward) => (
             <Card key={reward.id} className="bg-bg-card border-white/5 p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">

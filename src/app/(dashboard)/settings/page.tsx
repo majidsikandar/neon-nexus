@@ -3,12 +3,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Settings, User, Bell, Shield, Palette, Globe, AlertTriangle, HelpCircle, LogOut } from 'lucide-react'
-import { cn } from '@/lib/utils'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Switch } from '@/components/ui/switch'
-import { Separator } from '@/components/ui/separator'
 
 export default function SettingsPage() {
   const [notifications, setNotifications] = useState({

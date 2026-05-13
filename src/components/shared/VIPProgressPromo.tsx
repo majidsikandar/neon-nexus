@@ -1,13 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { Gem, Star, ArrowRight } from 'lucide-react'
-import { cn } from '@/lib/utils'
 import { useUserStore } from '@/store'
 import { vipTiers } from '@/config/mock-data'
-import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 
 export function VIPProgressPromo() {
@@ -85,7 +83,7 @@ export function VIPProgressPromo() {
         {!nextTier && (
           <div className="text-right">
             <span className="text-lg font-bold text-accent-gold">Max Level!</span>
-            <p className="text-xs text-text-muted">You've reached the top</p>
+            <p className="text-xs text-text-muted">You&apos;ve reached the top</p>
           </div>
         )}
       </div>

@@ -1,24 +1,15 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Trophy, Users, Clock, Gift, ArrowRight, Filter } from 'lucide-react'
+import { Trophy, Users, Clock, Gift } from 'lucide-react'
 import { mockTournaments } from '@/config/mock-data'
-import { cn, formatCurrency, formatCountdown } from '@/lib/utils'
+import { formatCurrency, formatCountdown } from '@/lib/utils'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
 
 export default function TournamentsPage() {
-  const [filter, setFilter] = useState<string>('all')
-
   const activeTournaments = mockTournaments.filter((t) => t.status === 'active')
   const upcomingTournaments = mockTournaments.filter((t) => t.status === 'upcoming')
 
@@ -46,21 +37,6 @@ export default function TournamentsPage() {
             Compete for massive prize pools
           </p>
         </div>
-
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-            <Button variant="outline" className="border-white/10">
-              <Filter className="w-4 h-4 mr-2" />
-              Filter
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-bg-card border-white/10">
-            <DropdownMenuItem onClick={() => setFilter('all')}>All Games</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setFilter('slots')}>Slots</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setFilter('crash')}>Crash</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setFilter('jackpot')}>Jackpot</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
       </div>
 
       {/* Stats */}

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Trophy, Users, Clock, ArrowRight } from 'lucide-react'
-import { cn, formatCurrency, formatCountdown } from '@/lib/utils'
+import { formatCurrency, formatCountdown } from '@/lib/utils'
 import { mockTournaments } from '@/config/mock-data'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'

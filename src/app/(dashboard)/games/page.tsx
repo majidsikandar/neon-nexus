@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Search, Filter, SlidersHorizontal, ChevronDown } from 'lucide-react'
+import { Search, SlidersHorizontal, ChevronDown } from 'lucide-react'
 import { GameCard } from '@/components/shared'
 import { mockGames, gameCategories } from '@/config/mock-data'
 import type { GameCategory } from '@/types'

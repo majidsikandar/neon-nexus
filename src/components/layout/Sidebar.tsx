@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -22,7 +21,6 @@ import { formatCurrency } from '@/lib/utils'
 import { useUIStore, useUserStore } from '@/store'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
 
 const navItems = [
   { href: '/home', label: 'Home', icon: Home },
